@@ -23,7 +23,7 @@ function(add_samp_plugin name)
                  LINK_FLAGS " -Wl,--enable-stdcall-fixup")
   endif()
 
-  if(UNIX AND NOT WIN32)
+  if(UNIX AND NOT WIN32 AND NOT APPLE)
     set_property(TARGET ${name} APPEND PROPERTY COMPILE_DEFINITIONS "LINUX")
   endif()
 endfunction()
