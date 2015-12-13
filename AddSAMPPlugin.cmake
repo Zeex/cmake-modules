@@ -29,4 +29,9 @@ function(add_samp_plugin name)
   elseif(UNIX AND NOT WIN32 AND NOT APPLE)
     set_property(TARGET ${name} APPEND PROPERTY COMPILE_DEFINITIONS "LINUX")
   endif()
+
+  if(MINGW)
+    # Work around missing #include <stddef.h> in <SDK>/amx/amx.h.
+    set_property(TARGET ${name} APPEND_STRING PROPERTY COMPILE_FLAGS " -include stddef.h")
+  endif()
 endfunction()
