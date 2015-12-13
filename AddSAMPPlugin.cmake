@@ -25,6 +25,7 @@ function(add_samp_plugin name)
 
   if(CYGWIN)
     set_property(TARGET ${name} APPEND PROPERTY COMPILE_DEFINITIONS "WIN32")
+    set_property(TARGET ${name} APPEND_STRING PROPERTY LINK_FLAGS " -Wl,--kill-at")
   elseif(UNIX AND NOT WIN32 AND NOT APPLE)
     set_property(TARGET ${name} APPEND PROPERTY COMPILE_DEFINITIONS "LINUX")
   endif()
