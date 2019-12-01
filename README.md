@@ -10,7 +10,6 @@ Name                                             | Description
 [FindSAMPGDK](FindSAMPGDK.cmake)                 | Finds [GDK][sampgdk] library and headers
 [FindSAMPServer](FindSAMPServer.cmake)           | Finds SA-MP server executable
 [FindSAMPServerCLI](FindSAMPServerCLI.cmake)     | Finds [samp-server-cli][samp-server-cli]
------------------------------------------------------------------------------------------------------------
 
 [sampgdk]: https://github.com/Zeex/sampgdk
 [samp-server-cli]: https://github.com/Zeex/samp-server-cli
